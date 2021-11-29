@@ -1,3 +1,30 @@
+<script type=text/javascript src="{{url_for('static', filename='torrent/torrent_methods.js')}}"></script>
+
+
+
+
+{% extends 'base.html' %}
+
+
+{% block header %}
+<h1>{% block title %}New Torrent{% endblock %}</h1>
+{% endblock %}
+
+
+
+{% block content %}
+<!-- <form id="sectionForm" action="/start_torrent" method="POST">
+    <label for="magnet_link">Magnet link</label>
+    <input name="magnet_link" id="magnet_link" value="{{ request.form['magnet_link'] }}" required>
+    <input type="checkbox" value="movie" name="video" onclick="checkboxSwitch(this)" />Movie
+    <input type="checkbox" value="series" name="video" onclick="checkboxSwitch(this)" />Series
+
+    <input type="submit" value="Download">
+
+</form> -->
+
+<h1>Remote torrent Activator 8000</h1>
+
 <div class="p-2">
     <form onsubmit="return handleData()" method="post" action="/start_torrent" autocomplete="off">
         <label for="magnet_link">Magnet link</label>
@@ -22,3 +49,5 @@
         </div>
     </form>
 </div>
+
+{% endblock %}

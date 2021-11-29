@@ -39,6 +39,12 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
+    @app.route('/')
+    @app.route('/index')
+    def index():
+        user = {'username': 'Milan'}
+        return render_template('index.html', title='Home', user=user)
+
 
     from flaskr.esp import esp
     app.register_blueprint(esp.bp)
