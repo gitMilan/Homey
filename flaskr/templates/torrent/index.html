@@ -1,0 +1,24 @@
+<div class="p-2">
+    <form onsubmit="return handleData()" method="post" action="/start_torrent" autocomplete="off">
+        <label for="magnet_link">Magnet link</label>
+        <input name="magnet_link" id="magnet_link" value="{{ request.form['magnet_link'] }}" required>
+        <div style="visibility:hidden; color:red; " id="chk_option_error">
+            Please select at least one option.
+        </div>
+
+        <div>
+            <input type="checkbox" name="langs[]" onclick="checkboxSwitch(this)" id="langs_javascript" value="series" > <label
+                for="langs_javascript">Series</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="langs[]" onclick="checkboxSwitch(this)"
+            id="langs_perl" value="movies"> <label for="langs_perl">Movie</label>
+        </div>
+
+
+        <div>
+            <input type="submit" name="submit" value="Submit" />
+        </div>
+    </form>
+</div>

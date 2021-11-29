@@ -1,0 +1,17 @@
+body {
+    font-family: "Raleway";
+  }
+
+  fieldset {
+    /* border: 1px solid gray; */
+    width: 25%;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+  }
+
+  label, input {
+    display: inline-block;
+  }
+
